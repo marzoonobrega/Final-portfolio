@@ -1,0 +1,353 @@
+.menu, .site-header {
+    display:none;
+}
+
+.shift8-social {
+    display: inline-block;
+    padding:10px;
+}
+
+.fn-header a {
+    text-decoration:none;
+    outline: 0 !important;
+}
+
+.fn-container {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.fn-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fn-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fn-logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: .875em;
+}
+.fn-logo img {
+  display: block;
+}
+.fn-secondary-nav {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1em;
+  display: block;
+}
+.fn-secondary-nav li {
+  display: inline-block;
+  position:relative;
+  margin-left: 2.2em;
+}
+.fn-secondary-nav a {
+  display: inline-block;
+  text-transform: uppercase;
+  outline:0;
+}
+.fn-primary-nav-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+}
+.fn-primary-nav-trigger .fn-menu-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: none;
+}
+.fn-primary-nav-trigger .fn-menu-icon {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 18px;
+  height: 2px;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.fn-primary-nav-trigger .fn-menu-icon::before, .fn-primary-nav-trigger .fn-menu-icon:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+}
+.fn-primary-nav-trigger .fn-menu-icon::before {
+  top: -5px;
+}
+.fn-primary-nav-trigger .fn-menu-icon::after {
+  top: 5px;
+}
+.fn-primary-nav-trigger .fn-menu-icon.is-clicked::before, .fn-primary-nav-trigger .fn-menu-icon.is-clicked::after {
+  background-color: white;
+}
+.fn-primary-nav-trigger .fn-menu-icon.is-clicked::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.fn-primary-nav-trigger .fn-menu-icon.is-clicked::after {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.fn-primary-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin:0 !important;
+  z-index: 25;
+  text-align: center;
+  padding: 120px 0 !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch !important;
+  -webkit-transform: translateY(-100%) !important;
+  -moz-transform: translateY(-100%) !important;
+  -ms-transform: translateY(-100%) !important;
+  -o-transform: translateY(-100%) !important;
+  transform: translateY(-100%) !important;
+  -webkit-transition-property: -webkit-transform !important;
+  -moz-transition-property: -moz-transform !important;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s !important;
+  -moz-transition-duration: 0.4s !important;
+  transition-duration: 0.4s;
+  list-style:none !important;
+}
+.fn-primary-nav li {
+  font-size: 22px !important;
+  font-size: 1.375rem !important;
+  font-weight: 300 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  margin: .2em 0 !important;
+  text-transform: capitalize !important;
+  list-style:none;
+}
+.fn-primary-nav a {
+    padding: .4em 1em;
+    border-radius: 0.25em;
+    -webkit-transition: background 0.2s !important;
+    -moz-transition: background 0.2s !important;
+    transition: background 0.2s;
+    font-size: 1em;
+    line-height: 2.25em;
+    letter-spacing: 0.25em;
+    margin: auto;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    outline:0;
+}
+.fn-primary-nav.is-visible {
+  -webkit-transform: translateY(0) !important;
+  -moz-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  -o-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+.fn-menu-text {
+	outline:0 !important;
+	padding-right:10px;
+}
+
+.fn-main-content {
+  position: relative;
+  z-index: 1;
+}
+.fn-main-content p {
+  line-height: 1.6;
+  margin: 2em 0;
+}
+
+/* Dropdown menu */
+.fn-dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.fn-secondary-nav > li {
+    position: relative;
+    display: inline-block;
+}
+.fn-secondary-nav > ul > li {
+    position:relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.fn-secondary-nav > li > ul { 
+    display:none;
+    opacity:0;
+    position: absolute; 
+    min-width: 200px;
+    margin:0 !important;
+    padding: 0;
+}
+.fn-secondary-nav > li > ul > li > ul {
+	display:none;
+    opacity:0;
+    left:91%;
+    top:0;
+    margin-top:-1px;
+	width:100%;
+    position:absolute;
+}
+.fn-mobile-dropdown-content {
+    display:none;
+}
+
+/* Links inside the dropdown */
+.fn-sub-menu {
+    padding-left:0;
+}
+.fn-secondary-nav .fn-sub-menu > li {
+	margin: 0;
+    display:block;
+}
+.fn-secondary-nav .fn-sub-menu a {
+    text-decoration: none;
+    display: block;
+    padding:10px 0 10px 0;
+    letter-spacing: 1px;
+    border-bottom:1px solid #dddddd;
+    outline:0;
+    padding-left: 2.2em;
+}
+
+/* Show the dropdown menu on hover */
+.fn-secondary-nav > li:hover > .fn-sub-menu {
+    display: block;
+    opacity:1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+/* Show the sub dropdown menu on hover */
+.fn-secondary-nav > li > ul > li:hover > .fn-sub-menu {
+    display: block;
+    opacity:1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.fn-dropdown:hover .fn-dropbtn {
+    background-color: #3e8e41;
+}
+
+.fn-mobile-dropdown-content {
+    margin: 0 0 1.75em;
+}
+.fn-mobile-dropdown-content li {
+    padding:0;
+}
+
+.fn-header.is-fixed {
+    position: fixed;
+}
+/* responsive */
+@media only screen and (min-width: 1170px) {
+  .fn-header {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .fn-header.is-fixed {
+    position: fixed;
+    top: -70px;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+  .fn-header.is-visible {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .fn-primary-nav li {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+  .fn-primary-nav .fn-label {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .fn-intro {
+    height: 700px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .fn-main-content p {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
